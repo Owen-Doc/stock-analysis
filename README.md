@@ -1,6 +1,6 @@
 # stock-analysis
 
-#### Analyzing Stock Performances by Year
+### Analyzing Stock Performances by Year
 
 ## Project Overview
 
