@@ -13,14 +13,24 @@ In contrast to the fortuitous year that green energy stocks saw in 2017, 2018 sa
 
 ## Summary
 
-I was able to greatly improve my code's performance through refactoring. First I'll compare the old code's performance on the year 2017, shown in ![Green_stocks_2017](https://user-images.githubusercontent.com/76958825/109364396-b5f52b80-785c-11eb-9660-eb894781d12b.png) . This code took over 1.36 seconds to run for the year 2017, and by refactoring, I was able to drive that time down to .20 seconds, see ![VBA_Challenge_2017](https://user-images.githubusercontent.com/76958825/109364461-dfae5280-785c-11eb-9071-5232c59db948.png) . That's over a whole second of improvement! I achieved similar results for the year 2018, where the initial code ran in 1.36 seconds, ![Green_stocks_2018](https://user-images.githubusercontent.com/76958825/109364569-12584b00-785d-11eb-9e42-756f1a22f07f.png) , and the refactored code ran in .21 seconds![VBA_Challenge_2018](https://user-images.githubusercontent.com/76958825/109364590-20a66700-785d-11eb-8880-7da85dedcec2.png) . Additionally, when I refactored I added in several lines of formatting and style to the output table, which clearly did not have a great affect on the code's speed. This leads to believe that VBA is able to process and execute basic formatting changes very quickly.
+I was able to greatly improve my code's performance through refactoring. First I'll compare the old code's performance on the year 2017, shown here: 
+![Green_stocks_2017](https://user-images.githubusercontent.com/76958825/109364396-b5f52b80-785c-11eb-9660-eb894781d12b.png)
+This code took over 1.36 seconds to run for the year 2017, and by refactoring, I was able to drive that time down to .20 seconds, shown here: 
+![VBA_Challenge_2017](https://user-images.githubusercontent.com/76958825/109364461-dfae5280-785c-11eb-9071-5232c59db948.png) 
+That's over a whole second of improvement! I achieved similar results for the year 2018, where the initial code ran in 1.36 seconds, shown here:
+![Green_stocks_2018](https://user-images.githubusercontent.com/76958825/109364569-12584b00-785d-11eb-9e42-756f1a22f07f.png)
+and the refactored code ran in .21 seconds
+![VBA_Challenge_2018](https://user-images.githubusercontent.com/76958825/109364590-20a66700-785d-11eb-8880-7da85dedcec2.png)
+Additionally, when I refactored I added in several lines of formatting and style to the output table, which clearly did not have a great affect on the code's speed. This leads to believe that VBA is able to process and execute basic formatting changes very quickly.
 
 Through refactoring I made some key changes to how the program loops through the thousands of tickers and their stock information. By using a variable tickerIndex, which holds an integer that loops through an array of strings, the computer could directly reference each string's index in the array. This variable tickerIndex could then hold it's value through the loop, which also eliminated part of the conditional checks that the code ran when it was determining if a stock was the first or last instance in the spreadsheet. This is shown in the following block of code:
+
 '''
 If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
                     tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
             
                 End If
+                
 '''
 
 By optimizing the conditional check, the code did not have to verify more than one condition to know if it needed to move on the next ticker in the array of tickers.
