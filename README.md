@@ -30,6 +30,7 @@ Through refactoring I made some key changes to how the program loops through the
 '''
 
 If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
+
                     tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
             
                 End If
