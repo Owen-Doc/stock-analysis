@@ -27,9 +27,8 @@ I was able to greatly improve my code's performance through refactoring. The ini
 
 Through refactoring I made some key changes to how the program loops through the thousands of tickers and their stock information. By using a variable tickerIndex, which holds an integer that loops through an array of strings, the computer could directly reference each string's index in the array. This variable tickerIndex could then hold it's value through the loop, which also eliminated part of the conditional checks that the code ran when it was determining if a stock was the first or last instance in the spreadsheet. This is shown in the following block of code:
 
-'''
 
-If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
+'''If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
 
                     tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
             
