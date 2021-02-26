@@ -12,9 +12,10 @@ When we look at the results output table for 2017, we see that 11/12 of the sele
 In contrast to the fortuitous year that green energy stocks saw in 2017, 2018 saw a clear overall contraction in the returns of these stocks. 10/12 green energy stocks saw declines from the beginning of the year to the end. ENPH led the way in total trading volume at over 607 million total trades, and finished the year with an 81.9% return. RUN saw the highest growth in their stock price, at 84% with a robust 502 million daily trades. AY had the lowest daily trade volume at 83 million, and DQ showed the greatest decrease in their share price at -62.6%. Note that in 2017, DQ led the pack with the highest growth, and then in the following year had the highest contraction. 
 
 ## Summary
+![Green_stocks_2017](https://user-images.githubusercontent.com/76958825/109364396-b5f52b80-785c-11eb-9660-eb894781d12b.png)
 
 I was able to greatly improve my code's performance through refactoring. First I'll compare the old code's performance on the year 2017, shown here: 
-![Green_stocks_2017](https://user-images.githubusercontent.com/76958825/109364396-b5f52b80-785c-11eb-9660-eb894781d12b.png)
+
 This code took over 1.36 seconds to run for the year 2017, and by refactoring, I was able to drive that time down to .20 seconds, shown here: 
 ![VBA_Challenge_2017](https://user-images.githubusercontent.com/76958825/109364461-dfae5280-785c-11eb-9071-5232c59db948.png) 
 That's over a whole second of improvement! I achieved similar results for the year 2018, where the initial code ran in 1.36 seconds, shown here:
