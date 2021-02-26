@@ -13,6 +13,8 @@ In contrast to the fortuitous year that green energy stocks saw in 2017, 2018 sa
 
 ## Summary
 Below are the code performance results from before and after refactoring. 
+
+
 ![Green_stocks_2017](https://user-images.githubusercontent.com/76958825/109364396-b5f52b80-785c-11eb-9660-eb894781d12b.png)
 ![VBA_Challenge_2017](https://user-images.githubusercontent.com/76958825/109364461-dfae5280-785c-11eb-9071-5232c59db948.png) 
 ![Green_stocks_2018](https://user-images.githubusercontent.com/76958825/109364569-12584b00-785d-11eb-9e42-756f1a22f07f.png)
