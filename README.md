@@ -12,26 +12,18 @@ When we look at the results output table for 2017, we see that 11/12 of the sele
 In contrast to the fortuitous year that green energy stocks saw in 2017, 2018 saw a clear overall contraction in the returns of these stocks. 10/12 green energy stocks saw declines from the beginning of the year to the end. ENPH led the way in total trading volume at over 607 million total trades, and finished the year with an 81.9% return. RUN saw the highest growth in their stock price, at 84% with a robust 502 million daily trades. AY had the lowest daily trade volume at 83 million, and DQ showed the greatest decrease in their share price at -62.6%. Note that in 2017, DQ led the pack with the highest growth, and then in the following year had the highest contraction. 
 
 ## Summary
+Below are the code performance results from before and after refactoring. 
 ![Green_stocks_2017](https://user-images.githubusercontent.com/76958825/109364396-b5f52b80-785c-11eb-9660-eb894781d12b.png)
 ![VBA_Challenge_2017](https://user-images.githubusercontent.com/76958825/109364461-dfae5280-785c-11eb-9071-5232c59db948.png) 
 ![Green_stocks_2018](https://user-images.githubusercontent.com/76958825/109364569-12584b00-785d-11eb-9e42-756f1a22f07f.png)
 ![VBA_Challenge_2018](https://user-images.githubusercontent.com/76958825/109364590-20a66700-785d-11eb-8880-7da85dedcec2.png)
 
-I was able to greatly improve my code's performance through refactoring. First I'll compare the old code's performance on the year 2017, shown here: 
-
-
-
-This code took over 1.36 seconds to run for the year 2017, and by refactoring, I was able to drive that time down to .20 seconds, shown here: 
-
-That's over a whole second of improvement! I achieved similar results for the year 2018, where the initial code ran in 1.36 seconds, shown here:
-
-and the refactored code ran in .21 seconds
-
-Additionally, when I refactored I added in several lines of formatting and style to the output table, which clearly did not have a great affect on the code's speed. This leads to believe that VBA is able to process and execute basic formatting changes very quickly.
+I was able to greatly improve my code's performance through refactoring. The initial code took over 1.36 seconds to run for the year 2017, and by refactoring, I was able to drive that time down to .20 seconds. That's over a whole second of improvement! I achieved similar results for the year 2018, where the initial code ran in 1.36 seconds, and the refactored code ran in .21 seconds. Additionally, when I refactored I added in several lines of formatting and style to the output table, which clearly did not have a great affect on the code's speed. This leads to believe that VBA is able to process and execute basic formatting changes very quickly.
 
 Through refactoring I made some key changes to how the program loops through the thousands of tickers and their stock information. By using a variable tickerIndex, which holds an integer that loops through an array of strings, the computer could directly reference each string's index in the array. This variable tickerIndex could then hold it's value through the loop, which also eliminated part of the conditional checks that the code ran when it was determining if a stock was the first or last instance in the spreadsheet. This is shown in the following block of code:
 
 '''
+
 If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
                     tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
             
